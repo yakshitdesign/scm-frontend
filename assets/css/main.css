@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sidebar CSS */
+
+#sidebar.collapsed {
+  width: 80px;
+}
+
+#sidebar.collapsed .menu-text {
+  display: none;
+}
+
+#sidebar.collapsed #menu-item {
+  justify-content: center;
+}
+
+#sidebar.collapsed #sidebar-item {
+  justify-content: center;
+}
+
+#sidebar.collapsed #user-menu {
+  width: 240px;
+  left: 80px;
+  bottom: 0%;
+}
+
+.modal-effect {
+  z-index: 999;
+  width: 100%;
+  background-color: #00000017;
+  position: absolute; /* Ensure it's not sticky */
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Initially hidden off-screen */
+}
+
+.modal-effect.active {
+  transform: translateX(0); /* Slide in when active */
+}
+
+#menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#user-menu {
+  width: 93%;
+    bottom: 8%;
+    transform: translateY(-10%);
+}
+
+#sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    max-width: 100vw;
+    background-color: #00000037;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#sidebar-container.active {
+    transform: translateX(0);
+}
+
+@media (min-width: 1280px) {
+    #sidebar-container {
+        position: sticky;
+        transform: none;
+        width: auto;
+    }
+}
+
