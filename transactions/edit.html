@@ -140,7 +140,7 @@
                         <span id="menu-text" class="menu-text flex flex-grow">Notifications</span>
                     </a>
                     <!-- Admin -->
-                    <a href=".././admin.html" id="menu-item" class="menu-item flex items-center gap-1 p-2 rounded text-sm font-medium text-neutral-600 hover:text-neutral-700 dark:text-neutral-300 dark:hover:text-neutral-300 bg-white dark:bg-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-200 dark:focus:ring-neutral-700 transition-all duration-300 no-underline">
+                    <a href="./admin.html" id="menu-item" class="menu-item flex items-center gap-1 p-2 rounded text-sm font-medium text-neutral-600 hover:text-neutral-700 dark:text-neutral-300 dark:hover:text-neutral-300 bg-white dark:bg-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-200 dark:focus:ring-neutral-700 transition-all duration-300 no-underline">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
                             <path opacity="0.4" d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z" fill="currentColor" />
                             <path d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -184,7 +184,7 @@
                 <div id="user-menu" class="hidden mt-2 bg-white dark:bg-neutral-700 rounded-lg shadow-lg border border-neutral-200 dark:border-neutral-600 absolute">
                     <!-- User Info -->
                     <div class="p-4 flex items-center gap-3">
-                        <img src="./assets/img/misc/default-avatar.png" alt="User avatar" class="w-10 h-10 rounded-full">
+                        <img src=".././assets/img/misc/default-avatar.png" alt="User avatar" class="w-10 h-10 rounded-full">
                         <div class="flex flex-col">
                             <div class="flex space-x-2 items-center justify-start">
                                 <span class="text-sm font-medium text-neutral-900 dark:text-white">John Doe</span>
@@ -438,13 +438,13 @@
                                     <label class="block text-neutral-500 dark:text-neutral-400 text-sm font-normal mb-2" for="grid-last-name">
                                       Date
                                     </label>
-                                    <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-start-date" type="date">
+                                    <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-start-date" type="date" value="2024-01-01">
                                 </div>
                                 <div class="w-full md:w-1/2">
                                     <label class="block text-neutral-500 dark:text-neutral-400 text-sm font-normal mb-2" for="grid-last-name">
                                         Amount
                                       </label>
-                                      <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-amount" type="number">
+                                      <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-amount" type="number" value="1000">
                                 </div>
                             </div>
                             <div class="flex flex-col md:flex-row gap-5">
@@ -452,7 +452,7 @@
                                     <label class="block text-neutral-500 dark:text-neutral-400 text-sm font-normal mb-2" for="grid-last-name">
                                       Description
                                     </label>
-                                    <textarea class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-description" type="text"></textarea>
+                                    <textarea class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-description" type="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
                                 </div>
                             </div>
                         </div>                        
