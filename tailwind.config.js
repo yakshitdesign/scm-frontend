@@ -9,6 +9,7 @@ module.exports = {
     './projects.html',
     './projects/create.html',
     './projects/edit.html',
+    './projects/view.html',
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   
