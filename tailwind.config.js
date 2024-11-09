@@ -2,6 +2,10 @@
 module.exports = {
   content: [
     './index.html',
+    './employee.html',
+    './employee/create.html',
+    './employee/view.html',
+    './employee/edit.html',
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   

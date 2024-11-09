@@ -40,26 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Dropdown toggle
+    const closeAllDropdowns = () => {
+        document.querySelectorAll('.dropdown-menu, .options-dropdown').forEach(menu => {
+            menu.classList.add('hidden');
+        });
+    };
+
     if (dropdownButton && dropdownMenu) {
         dropdownButton.addEventListener('click', (event) => {
             event.stopPropagation();
-            dropdownMenu.classList.toggle('active');
+            closeAllDropdowns(); // Close all other dropdowns first
+            dropdownMenu.classList.toggle('hidden');
         });
-
-        // Theme toggle within dropdown
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                const newTheme = document.documentElement.classList.toggle('dark') ? 'dark' : 'light';
-                localStorage.setItem('theme', newTheme);
-                themeToggleIcon.classList.toggle('translate-x-4');
-                updateLogoVisibility(newTheme);
-            });
-        }
 
         // Close dropdown when clicking outside
         document.addEventListener('click', (event) => {
             if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.classList.remove('active');
+                dropdownMenu.classList.add('hidden');
             }
         });
     }
@@ -111,6 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function() {
+        document.querySelectorAll('.options-dropdown').forEach(dropdown => {
+            dropdown.classList.add('hidden');
+        });
+    });
 });
 
 // Sidebar Toggle Function for Desktop
@@ -163,3 +167,16 @@ function updateLogoVisibility(theme) {
         logo.classList.toggle('hidden', !isCollapsed || (theme === 'dark' ? !logo.classList.contains('logo-icon-dark') : !logo.classList.contains('logo-icon-light')));
     });
 }
+
+function toggleOptionsDropdown(event, id) {
+    event.stopPropagation();
+    const dropdown = document.getElementById(`options-dropdown-${id}`);
+    dropdown.classList.toggle('hidden');
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function() {
+    document.querySelectorAll('.options-dropdown').forEach(dropdown => {
+        dropdown.classList.add('hidden');
+    });
+});
