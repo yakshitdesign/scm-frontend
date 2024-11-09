@@ -363,7 +363,7 @@
             </div>
             <div class="flex justify-between items-center p-4 bg-white dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-700">
                 <div class="flex gap-1">
-                    <h2 class="text-lg font-medium m-0 text-neutral-900 dark:text-neutral-100">Add Project</h2>
+                    <h2 class="text-lg font-medium m-0 text-neutral-900 dark:text-neutral-100">Edit Project</h2>
                 </div>
                 <div class="flex gap-2">
                     <a href="../projects.html" class="flex items-center gap-1.5 p-2 rounded-md text-sm text-neutral-900 bg-white hover:bg-neutral-200 dark:bg-neutral-800 dark:text-white dark:hover:bg-neutral-700 border border-neutral-200 dark:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 transition-ease-in-out duration-300 shadow-sm">
@@ -389,14 +389,14 @@
                                     <label class="block text-neutral-500 dark:text-neutral-400 text-sm font-normal mb-2" for="grid-last-name">
                                         Project Name
                                     </label>
-                                    <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-project-name" type="text" placeholder="Project One">
+                                    <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-project-name" type="text" placeholder="Project One" value="Project One">
                                 </div>
                                 <div class="w-full md:w-1/2">
                                     <label class="block text-neutral-500 dark:text-neutral-400 text-sm font-normal mb-2" for="grid-last-name">
                                         Contractor
                                     </label>
                                     <select class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-contractor">
-                                        <option value="contractor1">Contractor 1</option>
+                                        <option selected value="contractor1">Contractor 1</option>
                                         <option value="contractor2">Contractor 2</option>
                                         <option value="contractor3">Contractor 3</option>
                                     </select>
@@ -408,7 +408,7 @@
                                         Project Manager
                                     </label>
                                     <select class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-manager">
-                                        <option value="Manager1">Manager 1</option>
+                                        <option selected value="Manager1">Manager 1</option>
                                         <option value="Manager2">Manager 2</option>
                                         <option value="Manager3">Manager 3</option>
                                     </select>
@@ -417,7 +417,7 @@
                                     <label class="block text-neutral-500 dark:text-neutral-400 text-sm font-normal mb-2" for="grid-last-name">
                                         Foreman
                                       </label>
-                                      <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-foreman" type="text" placeholder="Joshep">
+                                      <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-foreman" type="text" placeholder="Joshep" value="Joshep">
                                 </div>
                             </div>
                             <div class="flex flex-col md:flex-row gap-5">
@@ -425,13 +425,13 @@
                                     <label class="block text-neutral-500 dark:text-neutral-400 text-sm font-normal mb-2" for="grid-last-name">
                                       Start Date
                                     </label>
-                                    <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-start-date" type="date">
+                                    <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-start-date" type="date" value="2024-01-01">
                                 </div>
                                 <div class="w-full md:w-1/2">
                                     <label class="block text-neutral-500 dark:text-neutral-400 text-sm font-normal mb-2" for="grid-last-name">
                                       End Date
                                     </label>
-                                    <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-end-date" type="date">
+                                    <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-end-date" type="date" value="2024-01-01">
                                 </div>
                             </div>
                             <div class="flex flex-col md:flex-row gap-5">
@@ -439,14 +439,14 @@
                                     <label class="block text-neutral-500 dark:text-neutral-400 text-sm font-normal mb-2" for="grid-last-name">
                                       Amount
                                     </label>
-                                    <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-amount" type="number">
+                                    <input class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-amount" type="number" value="10000">
                                 </div>
                                 <div class="w-full md:w-1/2">
                                     <label class="block text-neutral-500 dark:text-neutral-400 text-sm font-normal mb-2" for="grid-last-name">
                                       Status
                                     </label>
                                     <select class="p-3 w-full bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white placeholder:text-neutral-400 dark:placeholder:text-neutral-500 border border-neutral-200 dark:border-neutral-700 rounded-md focus:outline-none focus:bg-white focus:border-neutral-400" id="grid-status">
-                                        <option value="Active">Active</option>
+                                        <option selected value="Active">Active</option>
                                         <option value="Completed">Completed</option>
                                         <option value="On Hold">On Hold</option>
                                         <option value="Cancelled">Cancelled</option>
