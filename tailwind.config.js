@@ -18,6 +18,7 @@ module.exports = {
     './contractors/create.html',
     './contractors/edit.html',
     './contractors/view.html',
+    './notifications.html',
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   
