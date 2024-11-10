@@ -470,145 +470,29 @@
                             </div>
                             <!-- Table -->
                             <div class="overflow-x-auto">
-                                <table class="w-full min-w-max">
+                                <table id="projectsTable" class="w-full min-w-max">
                                     <thead>
-                                        <tr class="text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600">
+                                        <tr class="text-neutral-500 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-700 border-b border-t border-neutral-200 dark:border-neutral-600">
                                             <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
                                                 <div class="flex justify-center items-center">
-                                                    <label class="flex items-center cursor-pointer relative">
-                                                        <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                        <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </label>
+                                                    <input type="checkbox" class="select-all-checkbox peer h-4 w-4 cursor-pointer rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500"/>
                                                 </div>
                                             </th>
-                                            <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Project Name</th>
-                                            <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Contractor</th>
-                                            <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Foreman</th>
-                                            <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Due Date</th>
-                                            <th class="inline-flex py-2 text-left text-sm font-medium"></th>
+                                            <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600">
+                                                <p class="flex items-center gap-1 text-sm font-medium">Project Name</p>
+                                            </th>
+                                            <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600">
+                                                <p class="flex items-center gap-1 text-sm font-medium">Contractor</p>
+                                            </th>
+                                            <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600">
+                                                <p class="flex items-center gap-1 text-sm font-medium">End Date</p>
+                                            </th>
+                                            <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600">
+                                                <p class="flex items-center gap-1 text-sm font-medium">Status</p>
+                                            </th>
+                                            <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600"></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                            <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <label class="flex items-center cursor-pointer relative">
-                                                        <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                        <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Garden Home Overview</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Midwest Construction Partners</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Mary Smith</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Oct 23, 2024</td>
-                                            <td class="inline-flex px-4 py-2 text-left text-sm font-normal">
-                                                <span class="inline-flex items-center gap-1 px-2 py-1 rounded-[4px] text-xs font-medium bg-orange-100 text-orange-800 dark:bg-orange-400/10 dark:text-orange-300">
-                                                    In Progress
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                            <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <label class="flex items-center cursor-pointer relative">
-                                                        <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                        <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Living Room Renovation</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">East Coast Builders</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">John Doe</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Dec 10, 2024</td>
-                                            <td class="inline-flex px-4 py-2 text-left text-sm font-normal">
-                                                <span class="inline-flex items-center gap-1 px-2 py-1 rounded-[4px] text-xs font-medium bg-neutral-200 text-neutral-800 dark:bg-neutral-400/10 dark:text-neutral-200">
-                                                    Not Started
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                            <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <label class="flex items-center cursor-pointer relative">
-                                                        <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                        <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Kitchen Upgrade</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Southern Design Co.</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Alice Johnson</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Jan 5, 2025</td>
-                                            <td class="inline-flex items-center px-4 py-2 text-left text-sm font-normal">
-                                                <span class="inline-flex items-center gap-1 px-2 py-1 rounded-[4px] text-xs font-medium bg-orange-100 text-orange-800 dark:bg-orange-400/10 dark:text-orange-300">
-                                                    In Progress
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                            <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <label class="flex items-center cursor-pointer relative">
-                                                        <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                        <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Bathroom Remodel</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Northern Interiors</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Michael Brown</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Feb 20, 2025</td>
-                                            <td class="inline-flex px-4 py-2 text-left text-sm font-normal">
-                                                <span class="inline-flex items-center gap-1 px-2 py-1 rounded-[4px] text-xs font-medium bg-orange-100 text-orange-800 dark:bg-orange-400/10 dark:text-orange-300">
-                                                    In Progress
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                            <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <label class="flex items-center cursor-pointer relative">
-                                                        <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                        <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Office Expansion</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Urban Planners</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Emma Wilson</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Mar 15, 2025</td>
-                                            <td class="inline-flex px-4 py-2 text-left text-sm font-normal">
-                                                <span class="inline-flex items-center gap-1 px-2 py-1 rounded-[4px] text-xs font-medium bg-neutral-200 text-neutral-800 dark:bg-neutral-400/10 dark:text-neutral-200">
-                                                    Not Started
-                                                </span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
                                 </table>
                             </div>
                             <!-- Table Bottom -->
@@ -953,438 +837,37 @@
                             </button>
                         </div>
                     </div>
-                    <!-- Table -->
+                    <!-- Employees Table -->
                     <div class="overflow-x-auto">
-                        <table class="w-full min-w-max">
+                        <table id="employeeTable" class="w-full min-w-max">
                             <thead>
-                                <tr class="text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600">
+                                <tr class="text-neutral-500 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-700 border-b border-t border-neutral-200 dark:border-neutral-600">
                                     <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
                                         <div class="flex justify-center items-center">
-                                            <label class="flex items-center cursor-pointer relative">
-                                                <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                    </svg>
-                                                </span>
-                                            </label>
+                                            <input type="checkbox" class="peer h-4 w-4 cursor-pointer rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500"/>
                                         </div>
                                     </th>
-                                    <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Employee Name</th>
-                                    <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Role</th>
-                                    <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Hire Date</th>
-                                    <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Address</th>
-                                    <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Status</th>
-                                    <th class="w-1 px-4 py-2 text-left text-sm font-medium"></th>
+                                    <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600">
+                                        <p class="flex items-center gap-1 text-sm font-medium">Name</p>
+                                    </th>
+                                    <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600">
+                                        <p class="flex items-center gap-1 text-sm font-medium">Role</p>
+                                    </th>
+                                    <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600">
+                                        <p class="flex items-center gap-1 text-sm font-medium">Availability</p>
+                                    </th>
+                                    <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600">
+                                        <p class="flex items-center gap-1 text-sm font-medium">Location</p>
+                                    </th>
+                                    <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600">
+                                        <p class="flex items-center gap-1 text-sm font-medium">Amount</p>
+                                    </th>
+                                    <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600">
+                                        <p class="flex items-center gap-1 text-sm font-medium">Status</p>
+                                    </th>
+                                    <th class="px-4 py-2 text-left border-r border-neutral-200 dark:border-neutral-600"></th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                    <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                        <div class="flex justify-center items-center">
-                                            <label class="flex items-center cursor-pointer relative">
-                                                <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                    </svg>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="flex items-center p-3 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                        <img class="w-10 h-10 rounded-full" src="./assets/img/misc/avatars/profile-picture-1.jpg" alt="Jese image">
-                                        <div class="ps-3">
-                                            <div class="text-md font-medium">Neil Sims</div>
-                                            <div class="text-sm font-normal text-neutral-500 dark:text-neutral-400">neil.sims@mail.com</div>
-                                        </div>  
-                                    </td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Project Manager</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">August 15, 2023</td>
-                                    <td class="space-y-1 px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                        <div class="flex flex-col">
-                                            <span class="text-md font-normal">1835, Lexington Avenue, Houston</span>
-                                            <span class="text-xs font-normal text-neutral-500 dark:text-neutral-400">TX 77006, United States</span>
-                                        </div>
-                                    </td>
-                                    <td class="px-4 py-2 text-left text-sm font-normal border-r border-neutral-200 dark:border-neutral-600">
-                                        <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-sm font-medium text-green-600 dark:text-green-400 dark:bg-opacity-10 dark:bg-green-400">
-                                            <!-- Dot Icon -->
-                                            <svg width="8" height="8" class="mr-1 text-green-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <circle cx="4" cy="4" r="4" />
-                                            </svg>
-                                            Active
-                                        </span>
-                                    </td>
-                                    <td class="w-1 p-2 text-left text-sm font-normal">
-                                        <div class="relative">
-                                            <button onclick="toggleOptionsDropdown(event, 'unique-id')" class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
-                                                    <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </button>
-                                            <div id="options-dropdown-unique-id" class="options-dropdown hidden absolute right-0 mt-3 p-2 w-32 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 bg-white">
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-gray-700 hover:bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M22 14C22 13.6845 21.848 13.4713 21.544 13.045C20.1779 11.1294 16.6892 7 12 7C7.31078 7 3.8221 11.1294 2.45604 13.045C2.15201 13.4713 2 13.6845 2 14C2 14.3155 2.15201 14.5287 2.45604 14.955C3.8221 16.8706 7.31078 21 12 21C16.6892 21 20.1779 16.8706 21.544 14.955C21.848 14.5287 22 14.3155 22 14ZM12 11C13.6569 11 15 12.3431 15 14C15 15.6569 13.6569 17 12 17C10.3431 17 9 15.6569 9 14C9 12.3431 10.3431 11 12 11Z" fill="currentColor" />
-                                                        <path d="M2 8C2 8 6.47715 3 12 3C17.5228 3 22 8 22 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M21.544 13.045C21.848 13.4713 22 13.6845 22 14C22 14.3155 21.848 14.5287 21.544 14.955C20.1779 16.8706 16.6892 21 12 21C7.31078 21 3.8221 16.8706 2.45604 14.955C2.15201 14.5287 2 14.3155 2 14C2 13.6845 2.15201 13.4713 2.45604 13.045C3.8221 11.1294 7.31078 7 12 7C16.6892 7 20.1779 11.1294 21.544 13.045Z" stroke="currentColor" stroke-width="1.5" />
-                                                        <path d="M15 14C15 12.3431 13.6569 11 12 11C10.3431 11 9 12.3431 9 14C9 15.6569 10.3431 17 12 17C13.6569 17 15 15.6569 15 14Z" stroke="currentColor" stroke-width="1.5" />
-                                                    </svg>
-                                                    View
-                                                </a>
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-gray-700 hover:bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" d="M3.26538 21.9613L3.54536 21.9686C5.6032 22.0224 6.63212 22.0493 7.56806 21.6837C8.504 21.3182 9.25287 20.5969 10.7506 19.1543L10.7506 19.1543L19.655 10.5779L13.5 4.5L4.78943 13.9445C3.57944 15.2555 2.97444 15.9109 2.62371 16.7182C2.27297 17.5255 2.20301 18.4235 2.06308 20.2197L2.03608 20.5662C1.98636 21.2043 1.9615 21.5234 2.14359 21.73C2.32567 21.9367 2.63891 21.9449 3.26538 21.9613Z" fill="currentColor" />
-                                                        <path d="M14.0737 3.88545C14.8189 3.07808 15.1915 2.6744 15.5874 2.43893C16.5427 1.87076 17.7191 1.85309 18.6904 2.39232C19.0929 2.6158 19.4769 3.00812 20.245 3.79276C21.0131 4.5774 21.3972 4.96972 21.6159 5.38093C22.1438 6.37312 22.1265 7.57479 21.5703 8.5507C21.3398 8.95516 20.9446 9.33578 20.1543 10.097L10.7506 19.1543C9.25288 20.5969 8.504 21.3182 7.56806 21.6837C6.63212 22.0493 5.6032 22.0224 3.54536 21.9686L3.26538 21.9613C2.63891 21.9449 2.32567 21.9367 2.14359 21.73C1.9615 21.5234 1.98636 21.2043 2.03608 20.5662L2.06308 20.2197C2.20301 18.4235 2.27297 17.5255 2.62371 16.7182C2.97444 15.9109 3.57944 15.2555 4.78943 13.9445L14.0737 3.88545Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                                        <path d="M13 4L20 11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                                        <path d="M14 22L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    Edit
-                                                </a>
-                                                <div class="menu-item-divider border-t border-neutral-200 dark:border-neutral-700" style="margin-block: 2px;"></div>
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-red-700 hover:bg-red-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5H19.5Z" fill="currentColor" />
-                                                        <path d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M21 5.5H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M16.0575 5.5L15.3748 4.09173C14.9213 3.15626 14.6946 2.68852 14.3035 2.39681C14.2167 2.3321 14.1249 2.27454 14.0288 2.2247C13.5957 2 13.0759 2 12.0363 2C10.9706 2 10.4377 2 9.99745 2.23412C9.89986 2.28601 9.80675 2.3459 9.71906 2.41317C9.3234 2.7167 9.10239 3.20155 8.66037 4.17126L8.05469 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M9.5 16.5L9.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M14.5 16.5L14.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                    </svg>
-                                                    Delete
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                    <td class="w-1 px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                        <div class="flex justify-center items-center">
-                                            <label class="flex items-center cursor-pointer relative">
-                                                <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                    </svg>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="flex items-center p-3 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                        <img class="w-10 h-10 rounded-full" src="./assets/img/misc/avatars/profile-picture-2.jpg" alt="Jese image">
-                                        <div class="ps-3">
-                                            <div class="text-md font-medium">Sara Lee</div>
-                                            <div class="text-sm font-normal text-neutral-500 dark:text-neutral-400">sara.lee@mail.com</div>
-                                        </div>  
-                                    </td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Software Engineer</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">June 10, 2022</td>
-                                    <td class="space-y-1 px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                        <div class="flex flex-col">
-                                            <span class="text-md font-normal">1234, Elm Street, Austin</span>
-                                            <span class="text-xs font-normal text-neutral-500 dark:text-neutral-400">TX 73301, United States</span>
-                                        </div>
-                                    </td>
-                                    <td class="px-4 py-2 text-left text-sm font-normal border-r border-neutral-200 dark:border-neutral-600">
-                                        <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-sm font-medium text-red-600 dark:text-red-400 dark:bg-opacity-10 dark:bg-red-400">
-                                            <!-- Dot Icon -->
-                                            <svg width="8" height="8" class="mr-1 text-red-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <circle cx="4" cy="4" r="4" />
-                                            </svg>
-                                            Inactive
-                                        </span>
-                                    </td>
-                                    <td class="w-1 p-2 text-left text-sm font-normal">
-                                        <div class="relative">
-                                            <button onclick="toggleOptionsDropdown(event, 'unique-id')" class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
-                                                    <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </button>
-                                            <div id="options-dropdown-unique-id" class="options-dropdown hidden absolute right-0 mt-3 p-2 w-32 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 bg-white">
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-gray-700 hover:bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M22 14C22 13.6845 21.848 13.4713 21.544 13.045C20.1779 11.1294 16.6892 7 12 7C7.31078 7 3.8221 11.1294 2.45604 13.045C2.15201 13.4713 2 13.6845 2 14C2 14.3155 2.15201 14.5287 2.45604 14.955C3.8221 16.8706 7.31078 21 12 21C16.6892 21 20.1779 16.8706 21.544 14.955C21.848 14.5287 22 14.3155 22 14ZM12 11C13.6569 11 15 12.3431 15 14C15 15.6569 13.6569 17 12 17C10.3431 17 9 15.6569 9 14C9 12.3431 10.3431 11 12 11Z" fill="currentColor" />
-                                                        <path d="M2 8C2 8 6.47715 3 12 3C17.5228 3 22 8 22 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M21.544 13.045C21.848 13.4713 22 13.6845 22 14C22 14.3155 21.848 14.5287 21.544 14.955C20.1779 16.8706 16.6892 21 12 21C7.31078 21 3.8221 16.8706 2.45604 14.955C2.15201 14.5287 2 14.3155 2 14C2 13.6845 2.15201 13.4713 2.45604 13.045C3.8221 11.1294 7.31078 7 12 7C16.6892 7 20.1779 11.1294 21.544 13.045Z" stroke="currentColor" stroke-width="1.5" />
-                                                        <path d="M15 14C15 12.3431 13.6569 11 12 11C10.3431 11 9 12.3431 9 14C9 15.6569 10.3431 17 12 17C13.6569 17 15 15.6569 15 14Z" stroke="currentColor" stroke-width="1.5" />
-                                                    </svg>
-                                                    View
-                                                </a>
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-gray-700 hover:bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" d="M3.26538 21.9613L3.54536 21.9686C5.6032 22.0224 6.63212 22.0493 7.56806 21.6837C8.504 21.3182 9.25287 20.5969 10.7506 19.1543L10.7506 19.1543L19.655 10.5779L13.5 4.5L4.78943 13.9445C3.57944 15.2555 2.97444 15.9109 2.62371 16.7182C2.27297 17.5255 2.20301 18.4235 2.06308 20.2197L2.03608 20.5662C1.98636 21.2043 1.9615 21.5234 2.14359 21.73C2.32567 21.9367 2.63891 21.9449 3.26538 21.9613Z" fill="currentColor" />
-                                                        <path d="M14.0737 3.88545C14.8189 3.07808 15.1915 2.6744 15.5874 2.43893C16.5427 1.87076 17.7191 1.85309 18.6904 2.39232C19.0929 2.6158 19.4769 3.00812 20.245 3.79276C21.0131 4.5774 21.3972 4.96972 21.6159 5.38093C22.1438 6.37312 22.1265 7.57479 21.5703 8.5507C21.3398 8.95516 20.9446 9.33578 20.1543 10.097L10.7506 19.1543C9.25288 20.5969 8.504 21.3182 7.56806 21.6837C6.63212 22.0493 5.6032 22.0224 3.54536 21.9686L3.26538 21.9613C2.63891 21.9449 2.32567 21.9367 2.14359 21.73C1.9615 21.5234 1.98636 21.2043 2.03608 20.5662L2.06308 20.2197C2.20301 18.4235 2.27297 17.5255 2.62371 16.7182C2.97444 15.9109 3.57944 15.2555 4.78943 13.9445L14.0737 3.88545Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                                        <path d="M13 4L20 11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                                        <path d="M14 22L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    Edit
-                                                </a>
-                                                <div class="menu-item-divider border-t border-neutral-200 dark:border-neutral-700" style="margin-block: 2px;"></div>
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-red-700 hover:bg-red-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5H19.5Z" fill="currentColor" />
-                                                        <path d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M21 5.5H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M16.0575 5.5L15.3748 4.09173C14.9213 3.15626 14.6946 2.68852 14.3035 2.39681C14.2167 2.3321 14.1249 2.27454 14.0288 2.2247C13.5957 2 13.0759 2 12.0363 2C10.9706 2 10.4377 2 9.99745 2.23412C9.89986 2.28601 9.80675 2.3459 9.71906 2.41317C9.3234 2.7167 9.10239 3.20155 8.66037 4.17126L8.05469 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M9.5 16.5L9.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M14.5 16.5L14.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                    </svg>
-                                                    Delete
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                    <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                        <div class="flex justify-center items-center">
-                                            <label class="flex items-center cursor-pointer relative">
-                                                <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                    </svg>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="flex items-center p-3 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                        <img class="w-10 h-10 rounded-full" src="./assets/img/misc/avatars/profile-picture-3.jpg" alt="Jese image">
-                                        <div class="ps-3">
-                                            <div class="text-md font-medium">Michael Brown</div>
-                                            <div class="text-sm font-normal text-neutral-500 dark:text-neutral-400">michael.brown@mail.com</div>
-                                        </div>  
-                                    </td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">UX Designer</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">January 5, 2021</td>
-                                    <td class="space-y-1 px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                        <div class="flex flex-col">
-                                            <span class="text-md font-normal">5678, Maple Avenue, Dallas</span>
-                                            <span class="text-xs font-normal text-neutral-500 dark:text-neutral-400">TX 75201, United States</span>
-                                        </div>
-                                    </td>
-                                    <td class="px-4 py-2 text-left text-sm font-normal border-r border-neutral-200 dark:border-neutral-600">
-                                        <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-sm font-medium text-green-600 dark:text-green-400 dark:bg-opacity-10 dark:bg-green-400">
-                                            <!-- Dot Icon -->
-                                            <svg width="8" height="8" class="mr-1 text-green-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <circle cx="4" cy="4" r="4" />
-                                            </svg>
-                                            Active
-                                        </span>
-                                    </td>
-                                    <td class="w-1 p-2 text-left text-sm font-normal">
-                                        <div class="relative">
-                                            <button onclick="toggleOptionsDropdown(event, 'unique-id')" class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
-                                                    <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </button>
-                                            <div id="options-dropdown-unique-id" class="options-dropdown hidden absolute right-0 mt-3 p-2 w-32 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 bg-white">
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-gray-700 hover:bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M22 14C22 13.6845 21.848 13.4713 21.544 13.045C20.1779 11.1294 16.6892 7 12 7C7.31078 7 3.8221 11.1294 2.45604 13.045C2.15201 13.4713 2 13.6845 2 14C2 14.3155 2.15201 14.5287 2.45604 14.955C3.8221 16.8706 7.31078 21 12 21C16.6892 21 20.1779 16.8706 21.544 14.955C21.848 14.5287 22 14.3155 22 14ZM12 11C13.6569 11 15 12.3431 15 14C15 15.6569 13.6569 17 12 17C10.3431 17 9 15.6569 9 14C9 12.3431 10.3431 11 12 11Z" fill="currentColor" />
-                                                        <path d="M2 8C2 8 6.47715 3 12 3C17.5228 3 22 8 22 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M21.544 13.045C21.848 13.4713 22 13.6845 22 14C22 14.3155 21.848 14.5287 21.544 14.955C20.1779 16.8706 16.6892 21 12 21C7.31078 21 3.8221 16.8706 2.45604 14.955C2.15201 14.5287 2 14.3155 2 14C2 13.6845 2.15201 13.4713 2.45604 13.045C3.8221 11.1294 7.31078 7 12 7C16.6892 7 20.1779 11.1294 21.544 13.045Z" stroke="currentColor" stroke-width="1.5" />
-                                                        <path d="M15 14C15 12.3431 13.6569 11 12 11C10.3431 11 9 12.3431 9 14C9 15.6569 10.3431 17 12 17C13.6569 17 15 15.6569 15 14Z" stroke="currentColor" stroke-width="1.5" />
-                                                    </svg>
-                                                    View
-                                                </a>
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-gray-700 hover:bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" d="M3.26538 21.9613L3.54536 21.9686C5.6032 22.0224 6.63212 22.0493 7.56806 21.6837C8.504 21.3182 9.25287 20.5969 10.7506 19.1543L10.7506 19.1543L19.655 10.5779L13.5 4.5L4.78943 13.9445C3.57944 15.2555 2.97444 15.9109 2.62371 16.7182C2.27297 17.5255 2.20301 18.4235 2.06308 20.2197L2.03608 20.5662C1.98636 21.2043 1.9615 21.5234 2.14359 21.73C2.32567 21.9367 2.63891 21.9449 3.26538 21.9613Z" fill="currentColor" />
-                                                        <path d="M14.0737 3.88545C14.8189 3.07808 15.1915 2.6744 15.5874 2.43893C16.5427 1.87076 17.7191 1.85309 18.6904 2.39232C19.0929 2.6158 19.4769 3.00812 20.245 3.79276C21.0131 4.5774 21.3972 4.96972 21.6159 5.38093C22.1438 6.37312 22.1265 7.57479 21.5703 8.5507C21.3398 8.95516 20.9446 9.33578 20.1543 10.097L10.7506 19.1543C9.25288 20.5969 8.504 21.3182 7.56806 21.6837C6.63212 22.0493 5.6032 22.0224 3.54536 21.9686L3.26538 21.9613C2.63891 21.9449 2.32567 21.9367 2.14359 21.73C1.9615 21.5234 1.98636 21.2043 2.03608 20.5662L2.06308 20.2197C2.20301 18.4235 2.27297 17.5255 2.62371 16.7182C2.97444 15.9109 3.57944 15.2555 4.78943 13.9445L14.0737 3.88545Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                                        <path d="M13 4L20 11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                                        <path d="M14 22L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    Edit
-                                                </a>
-                                                <div class="menu-item-divider border-t border-neutral-200 dark:border-neutral-700" style="margin-block: 2px;"></div>
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-red-700 hover:bg-red-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5H19.5Z" fill="currentColor" />
-                                                        <path d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M21 5.5H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M16.0575 5.5L15.3748 4.09173C14.9213 3.15626 14.6946 2.68852 14.3035 2.39681C14.2167 2.3321 14.1249 2.27454 14.0288 2.2247C13.5957 2 13.0759 2 12.0363 2C10.9706 2 10.4377 2 9.99745 2.23412C9.89986 2.28601 9.80675 2.3459 9.71906 2.41317C9.3234 2.7167 9.10239 3.20155 8.66037 4.17126L8.05469 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M9.5 16.5L9.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M14.5 16.5L14.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                    </svg>
-                                                    Delete
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                    <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                        <div class="flex justify-center items-center">
-                                            <label class="flex items-center cursor-pointer relative">
-                                                <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                    </svg>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="flex items-center p-3 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                        <img class="w-10 h-10 rounded-full" src="./assets/img/misc/avatars/profile-picture-4.jpg" alt="Jese image">
-                                        <div class="ps-3">
-                                            <div class="text-md font-medium">Emily Davis</div>
-                                            <div class="text-sm font-normal text-neutral-500 dark:text-neutral-400">emily.davis@mail.com</div>
-                                        </div>  
-                                    </td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Data Analyst</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">March 20, 2020</td>
-                                    <td class="space-y-1 px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                        <div class="flex flex-col">
-                                            <span class="text-md font-normal">9101, Pine Street, San Antonio</span>
-                                            <span class="text-xs font-normal text-neutral-500 dark:text-neutral-400">TX 78201, United States</span>
-                                        </div>
-                                    </td>
-                                    <td class="px-4 py-2 text-left text-sm font-normal border-r border-neutral-200 dark:border-neutral-600">
-                                        <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-sm font-medium text-green-600 dark:text-green-400 dark:bg-opacity-10 dark:bg-green-400">
-                                            <!-- Dot Icon -->
-                                            <svg width="8" height="8" class="mr-1 text-green-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <circle cx="4" cy="4" r="4" />
-                                            </svg>
-                                            Active
-                                        </span>
-                                    </td>
-                                    <td class="w-1 p-2 text-left text-sm font-normal">
-                                        <div class="relative">
-                                            <button onclick="toggleOptionsDropdown(event, 'unique-id')" class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
-                                                    <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </button>
-                                            <div id="options-dropdown-unique-id" class="options-dropdown hidden absolute right-0 mt-3 p-2 w-32 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 bg-white">
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-gray-700 hover:bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M22 14C22 13.6845 21.848 13.4713 21.544 13.045C20.1779 11.1294 16.6892 7 12 7C7.31078 7 3.8221 11.1294 2.45604 13.045C2.15201 13.4713 2 13.6845 2 14C2 14.3155 2.15201 14.5287 2.45604 14.955C3.8221 16.8706 7.31078 21 12 21C16.6892 21 20.1779 16.8706 21.544 14.955C21.848 14.5287 22 14.3155 22 14ZM12 11C13.6569 11 15 12.3431 15 14C15 15.6569 13.6569 17 12 17C10.3431 17 9 15.6569 9 14C9 12.3431 10.3431 11 12 11Z" fill="currentColor" />
-                                                        <path d="M2 8C2 8 6.47715 3 12 3C17.5228 3 22 8 22 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M21.544 13.045C21.848 13.4713 22 13.6845 22 14C22 14.3155 21.848 14.5287 21.544 14.955C20.1779 16.8706 16.6892 21 12 21C7.31078 21 3.8221 16.8706 2.45604 14.955C2.15201 14.5287 2 14.3155 2 14C2 13.6845 2.15201 13.4713 2.45604 13.045C3.8221 11.1294 7.31078 7 12 7C16.6892 7 20.1779 11.1294 21.544 13.045Z" stroke="currentColor" stroke-width="1.5" />
-                                                        <path d="M15 14C15 12.3431 13.6569 11 12 11C10.3431 11 9 12.3431 9 14C9 15.6569 10.3431 17 12 17C13.6569 17 15 15.6569 15 14Z" stroke="currentColor" stroke-width="1.5" />
-                                                    </svg>
-                                                    View
-                                                </a>
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-gray-700 hover:bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" d="M3.26538 21.9613L3.54536 21.9686C5.6032 22.0224 6.63212 22.0493 7.56806 21.6837C8.504 21.3182 9.25287 20.5969 10.7506 19.1543L10.7506 19.1543L19.655 10.5779L13.5 4.5L4.78943 13.9445C3.57944 15.2555 2.97444 15.9109 2.62371 16.7182C2.27297 17.5255 2.20301 18.4235 2.06308 20.2197L2.03608 20.5662C1.98636 21.2043 1.9615 21.5234 2.14359 21.73C2.32567 21.9367 2.63891 21.9449 3.26538 21.9613Z" fill="currentColor" />
-                                                        <path d="M14.0737 3.88545C14.8189 3.07808 15.1915 2.6744 15.5874 2.43893C16.5427 1.87076 17.7191 1.85309 18.6904 2.39232C19.0929 2.6158 19.4769 3.00812 20.245 3.79276C21.0131 4.5774 21.3972 4.96972 21.6159 5.38093C22.1438 6.37312 22.1265 7.57479 21.5703 8.5507C21.3398 8.95516 20.9446 9.33578 20.1543 10.097L10.7506 19.1543C9.25288 20.5969 8.504 21.3182 7.56806 21.6837C6.63212 22.0493 5.6032 22.0224 3.54536 21.9686L3.26538 21.9613C2.63891 21.9449 2.32567 21.9367 2.14359 21.73C1.9615 21.5234 1.98636 21.2043 2.03608 20.5662L2.06308 20.2197C2.20301 18.4235 2.27297 17.5255 2.62371 16.7182C2.97444 15.9109 3.57944 15.2555 4.78943 13.9445L14.0737 3.88545Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                                        <path d="M13 4L20 11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                                        <path d="M14 22L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    Edit
-                                                </a>
-                                                <div class="menu-item-divider border-t border-neutral-200 dark:border-neutral-700" style="margin-block: 2px;"></div>
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-red-700 hover:bg-red-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5H19.5Z" fill="currentColor" />
-                                                        <path d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M21 5.5H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M16.0575 5.5L15.3748 4.09173C14.9213 3.15626 14.6946 2.68852 14.3035 2.39681C14.2167 2.3321 14.1249 2.27454 14.0288 2.2247C13.5957 2 13.0759 2 12.0363 2C10.9706 2 10.4377 2 9.99745 2.23412C9.89986 2.28601 9.80675 2.3459 9.71906 2.41317C9.3234 2.7167 9.10239 3.20155 8.66037 4.17126L8.05469 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M9.5 16.5L9.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M14.5 16.5L14.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                    </svg>
-                                                    Delete
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                    <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                        <div class="flex justify-center items-center">
-                                            <label class="flex items-center cursor-pointer relative">
-                                                <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                    </svg>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="flex items-center p-3 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                        <img class="w-10 h-10 rounded-full" src="./assets/img/misc/avatars/profile-picture-5.jpg" alt="Jese image">
-                                        <div class="ps-3">
-                                            <div class="text-md font-medium">David Johnson</div>
-                                            <div class="text-sm font-normal text-neutral-500 dark:text-neutral-400">david.johnson@mail.com</div>
-                                        </div>  
-                                    </td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Marketing Specialist</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">November 11, 2019</td>
-                                    <td class="space-y-1 px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                        <div class="flex flex-col">
-                                            <span class="text-md font-normal">1122, Cedar Lane, Fort Worth</span>
-                                            <span class="text-xs font-normal text-neutral-500 dark:text-neutral-400">TX 76101, United States</span>
-                                        </div>
-                                    </td>
-                                    <td class="px-4 py-2 text-left text-sm font-normal border-r border-neutral-200 dark:border-neutral-600">
-                                        <span class="inline-flex items-center rounded-md bg-neutral-50 px-2 py-1 text-sm font-medium text-neutral-600 dark:text-neutral-400 dark:bg-opacity-10 dark:bg-neutral-400">
-                                            <!-- Dot Icon -->
-                                            <svg width="8" height="8" class="mr-1 text-neutral-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <circle cx="4" cy="4" r="4" />
-                                            </svg>
-                                            On Hold
-                                        </span>
-                                    </td>
-                                    <td class="w-1 p-2 text-left text-sm font-normal">
-                                        <div class="relative">
-                                            <button onclick="toggleOptionsDropdown(event, 'unique-id')" class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
-                                                    <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </button>
-                                            <div id="options-dropdown-unique-id" class="options-dropdown hidden absolute right-0 mt-3 p-2 w-32 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50 bg-white">
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-gray-700 hover:bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M22 14C22 13.6845 21.848 13.4713 21.544 13.045C20.1779 11.1294 16.6892 7 12 7C7.31078 7 3.8221 11.1294 2.45604 13.045C2.15201 13.4713 2 13.6845 2 14C2 14.3155 2.15201 14.5287 2.45604 14.955C3.8221 16.8706 7.31078 21 12 21C16.6892 21 20.1779 16.8706 21.544 14.955C21.848 14.5287 22 14.3155 22 14ZM12 11C13.6569 11 15 12.3431 15 14C15 15.6569 13.6569 17 12 17C10.3431 17 9 15.6569 9 14C9 12.3431 10.3431 11 12 11Z" fill="currentColor" />
-                                                        <path d="M2 8C2 8 6.47715 3 12 3C17.5228 3 22 8 22 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M21.544 13.045C21.848 13.4713 22 13.6845 22 14C22 14.3155 21.848 14.5287 21.544 14.955C20.1779 16.8706 16.6892 21 12 21C7.31078 21 3.8221 16.8706 2.45604 14.955C2.15201 14.5287 2 14.3155 2 14C2 13.6845 2.15201 13.4713 2.45604 13.045C3.8221 11.1294 7.31078 7 12 7C16.6892 7 20.1779 11.1294 21.544 13.045Z" stroke="currentColor" stroke-width="1.5" />
-                                                        <path d="M15 14C15 12.3431 13.6569 11 12 11C10.3431 11 9 12.3431 9 14C9 15.6569 10.3431 17 12 17C13.6569 17 15 15.6569 15 14Z" stroke="currentColor" stroke-width="1.5" />
-                                                    </svg>
-                                                    View
-                                                </a>
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-gray-700 hover:bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" d="M3.26538 21.9613L3.54536 21.9686C5.6032 22.0224 6.63212 22.0493 7.56806 21.6837C8.504 21.3182 9.25287 20.5969 10.7506 19.1543L10.7506 19.1543L19.655 10.5779L13.5 4.5L4.78943 13.9445C3.57944 15.2555 2.97444 15.9109 2.62371 16.7182C2.27297 17.5255 2.20301 18.4235 2.06308 20.2197L2.03608 20.5662C1.98636 21.2043 1.9615 21.5234 2.14359 21.73C2.32567 21.9367 2.63891 21.9449 3.26538 21.9613Z" fill="currentColor" />
-                                                        <path d="M14.0737 3.88545C14.8189 3.07808 15.1915 2.6744 15.5874 2.43893C16.5427 1.87076 17.7191 1.85309 18.6904 2.39232C19.0929 2.6158 19.4769 3.00812 20.245 3.79276C21.0131 4.5774 21.3972 4.96972 21.6159 5.38093C22.1438 6.37312 22.1265 7.57479 21.5703 8.5507C21.3398 8.95516 20.9446 9.33578 20.1543 10.097L10.7506 19.1543C9.25288 20.5969 8.504 21.3182 7.56806 21.6837C6.63212 22.0493 5.6032 22.0224 3.54536 21.9686L3.26538 21.9613C2.63891 21.9449 2.32567 21.9367 2.14359 21.73C1.9615 21.5234 1.98636 21.2043 2.03608 20.5662L2.06308 20.2197C2.20301 18.4235 2.27297 17.5255 2.62371 16.7182C2.97444 15.9109 3.57944 15.2555 4.78943 13.9445L14.0737 3.88545Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                                        <path d="M13 4L20 11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                                        <path d="M14 22L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                    Edit
-                                                </a>
-                                                <div class="menu-item-divider border-t border-neutral-200 dark:border-neutral-700" style="margin-block: 2px;"></div>
-                                                <a href="#" class="block p-2 rounded-md text-sm transition-colors duration-150 flex items-center gap-2 text-red-700 hover:bg-red-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current opacity-70" fill="none">
-                                                        <path opacity="0.4" d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5H19.5Z" fill="currentColor" />
-                                                        <path d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M21 5.5H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M16.0575 5.5L15.3748 4.09173C14.9213 3.15626 14.6946 2.68852 14.3035 2.39681C14.2167 2.3321 14.1249 2.27454 14.0288 2.2247C13.5957 2 13.0759 2 12.0363 2C10.9706 2 10.4377 2 9.99745 2.23412C9.89986 2.28601 9.80675 2.3459 9.71906 2.41317C9.3234 2.7167 9.10239 3.20155 8.66037 4.17126L8.05469 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M9.5 16.5L9.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                        <path d="M14.5 16.5L14.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                                    </svg>
-                                                    Delete
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
                         </table>
                     </div>
                     <!-- Table Bottom -->
@@ -1406,6 +889,16 @@
   <script src="assets/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="assets/js/chart.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/dataTables.tailwindcss.min.js"></script>
+
+  <!-- custom DataTable initialization -->
+  <script src="./assets/js/employeeTable.js"></script>
+  <script src="./assets/js/projectsTable.js"></script>
 
 </body>
 </html>

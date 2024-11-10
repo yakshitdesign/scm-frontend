@@ -499,7 +499,7 @@
                     </div>
                     <!-- Table -->
                     <div class="overflow-x-auto">
-                        <table class="w-full min-w-max">
+                        <table id="transactionsTable" class="w-full min-w-max">
                             <thead>
                                 <tr class="text-neutral-500 dark:text-neutral-400 bg-neutral-50 dark:bg-neutral-700 border-b border-t border-neutral-200 dark:border-neutral-600">
                                     <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
@@ -589,42 +589,6 @@
                                     <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600"></th>                                    </th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr class="text-neutral-900 dark:text-neutral-100 bg-white dark:bg-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-700 cursor-pointer">
-                                    <td class="w-1 px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                        <div class="flex justify-center items-center">
-                                            <label class="flex items-center cursor-pointer relative">
-                                                <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                    </svg>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="w-1 px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">01</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Materials</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Credit Card</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Oct 12, 2024</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Home Depot</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Purchased Wood Materials</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">$1240.23</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">John Doe</td>
-                                    <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Randhurst Macys</td>
-                                    <td class="w-1 p-2 text-left text-sm font-normal">
-                                        <div class="relative">
-                                            <button class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
-                                                    <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
                         </table>
                     </div>
                     <!-- Table Pagination -->
@@ -687,8 +651,15 @@
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="assets/js/chart.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/dataTables.tailwindcss.min.js"></script>
+
+  <!-- custom DataTable initialization -->
+  <script src="./assets/js/transactionsTable.js"></script>
 
 </body>
 </html>

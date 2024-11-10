@@ -322,8 +322,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
+    // Check which page we're on
+    const isIndexPage = window.location.pathname.includes('index.html');
+    
+    // Initialize DataTable with conditional options
     $('#employeeTable').DataTable({
-        data: employees,
+        data: isIndexPage ? employees.slice(0, 5) : employees,
         columns: [
             {
                 data: null,
@@ -419,8 +423,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         ],
-        responsive: true,
-        dom: '<"overflow-x-auto"t><"flex items-center justify-between p-4 border-t border-neutral-200 dark:border-neutral-700"<"hidden md:flex text-sm font-normal text-neutral-500 dark:text-neutral-400"i><"flex items-center gap-2"p><"custom-length-menu-container">>',
+        // Only modify these specific options for index page
+        paging: !isIndexPage,
+        info: !isIndexPage,
+        searching: !isIndexPage,
+        lengthChange: !isIndexPage,
+        // Keep the existing dom setting for employee page, simplify for index
+        dom: isIndexPage ? 't' : '<"overflow-x-auto"t><"flex items-center justify-between p-4 border-t border-neutral-200 dark:border-neutral-700"<"hidden md:flex text-sm font-normal text-neutral-500 dark:text-neutral-400"i><"flex items-center gap-2"p><"custom-length-menu-container">>',
         language: {
             search: "",
             searchPlaceholder: "Search...",
