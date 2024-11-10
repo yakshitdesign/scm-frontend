@@ -1733,6 +1733,16 @@ video {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
+.text-green-700 {
+  --tw-text-opacity: 1;
+  color: rgb(21 128 61 / var(--tw-text-opacity));
+}
+
+.text-orange-700 {
+  --tw-text-opacity: 1;
+  color: rgb(194 65 12 / var(--tw-text-opacity));
+}
+
 .no-underline {
   text-decoration-line: none;
 }
@@ -1804,6 +1814,30 @@ video {
 
 .ring-red-600\/10 {
   --tw-ring-color: rgb(220 38 38 / 0.1);
+}
+
+.ring-green-600\/10 {
+  --tw-ring-color: rgb(22 163 74 / 0.1);
+}
+
+.ring-neutral-600\/10 {
+  --tw-ring-color: rgb(82 82 82 / 0.1);
+}
+
+.ring-orange-600\/10 {
+  --tw-ring-color: rgb(234 88 12 / 0.1);
+}
+
+.ring-green-600\/20 {
+  --tw-ring-color: rgb(22 163 74 / 0.2);
+}
+
+.ring-neutral-600\/20 {
+  --tw-ring-color: rgb(82 82 82 / 0.2);
+}
+
+.ring-orange-600\/20 {
+  --tw-ring-color: rgb(234 88 12 / 0.2);
 }
 
 .ring-opacity-5 {
@@ -2270,6 +2304,30 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.dark\:bg-green-900\/30:is(.dark *) {
+  background-color: rgb(20 83 45 / 0.3);
+}
+
+.dark\:bg-neutral-900\/30:is(.dark *) {
+  background-color: rgb(23 23 23 / 0.3);
+}
+
+.dark\:bg-orange-900\/30:is(.dark *) {
+  background-color: rgb(124 45 18 / 0.3);
+}
+
+.dark\:bg-green-400\/30:is(.dark *) {
+  background-color: rgb(74 222 128 / 0.3);
+}
+
+.dark\:bg-neutral-400\/30:is(.dark *) {
+  background-color: rgb(163 163 163 / 0.3);
+}
+
+.dark\:bg-orange-400\/30:is(.dark *) {
+  background-color: rgb(251 146 60 / 0.3);
+}
+
 .dark\:bg-opacity-10:is(.dark *) {
   --tw-bg-opacity: 0.1;
 }
@@ -2389,6 +2447,30 @@ video {
 
 .dark\:ring-red-500\/20:is(.dark *) {
   --tw-ring-color: rgb(239 68 68 / 0.2);
+}
+
+.dark\:ring-green-500\/20:is(.dark *) {
+  --tw-ring-color: rgb(34 197 94 / 0.2);
+}
+
+.dark\:ring-neutral-500\/20:is(.dark *) {
+  --tw-ring-color: rgb(115 115 115 / 0.2);
+}
+
+.dark\:ring-orange-500\/20:is(.dark *) {
+  --tw-ring-color: rgb(249 115 22 / 0.2);
+}
+
+.dark\:ring-green-400\/20:is(.dark *) {
+  --tw-ring-color: rgb(74 222 128 / 0.2);
+}
+
+.dark\:ring-neutral-400\/20:is(.dark *) {
+  --tw-ring-color: rgb(163 163 163 / 0.2);
+}
+
+.dark\:ring-orange-400\/20:is(.dark *) {
+  --tw-ring-color: rgb(251 146 60 / 0.2);
 }
 
 .dark\:file\:bg-neutral-900:is(.dark *)::file-selector-button {
