@@ -382,7 +382,7 @@
                 </div>
                 <div class="flex flex-col gap-5 px-5 pt-5 mb-[-1px]">
                     <div class="border-b border-neutral-200 dark:border-neutral-700">
-                        <nav class="flex gap-8">
+                        <nav class="hidden md:flex gap-8">
                             <a href="#home" class="tab-link active border-b-2 border-neutral-900 dark:border-white pb-3 px-1 text-neutral-900 dark:text-white">
                                 Home
                             </a>
@@ -430,9 +430,9 @@
                 </div>
             </div>
             <!-- Project Details -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
                 <!-- Project Profile -->
-                <div class="col-span-1">
+                <div class="col-span-1 order-1">
                     <div class="flex flex-col gap-3 h-full">
                         <div class="flex flex-col p-1 h-full rounded-xl border bg-white dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white">
                             <div class="top-profile-card">
@@ -497,201 +497,229 @@
                     </div>
                 </div>
                 <!-- Project Status -->
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex h-full flex-col gap-3">
-                        <!-- Project Status -->
-                        <div class="p-5 gap-2 rounded-lg border bg-white dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white">
-                            <h2 class="text-md font-medium mb-3">Project Status</h2>
-                            <div class="flex gap-[16px]">
-                                <select name="project_status" class="w-full rounded-md border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white px-3 py-2">
-                                    <option value="planning">Planning</option>
-                                    <option value="in_progress">In Progress</option>
-                                    <option value="on_hold">On Hold</option>
-                                    <option value="completed">Completed</option>
-                                    <option value="cancelled">Cancelled</option>
-                                </select>
-                                <button type="button" class="px-4 py-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-md hover:bg-neutral-800 dark:hover:bg-neutral-900 transition-colors">
-                                    Save
+                <div class="col-span-1 md:col-span-2 order-3 xl:order-2">
+                    <!-- Documents -->
+                    <div class="flex flex-col h-full rounded-md bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700">
+                        <!-- Table Top -->
+                        <div class="flex items-center justify-between p-4 border-b border-neutral-200 dark:border-neutral-700">
+                            <div class="flex items-center gap-2 text-neutral-900 dark:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
+                                    <path d="M20.4999 10.5V10C20.4999 6.22876 20.4999 4.34315 19.3284 3.17157C18.1568 2 16.2712 2 12.4999 2H11.5C7.72883 2 5.84323 2 4.67166 3.17156C3.50009 4.34312 3.50007 6.22872 3.50004 9.99993L3.5 14.5C3.49997 17.7874 3.49996 19.4312 4.40788 20.5375C4.57412 20.7401 4.75986 20.9258 4.96242 21.0921C6.06877 22 7.71249 22 10.9999 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M7.5 7H16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M7.5 12H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M20.5 20L20.5 17C20.5 15.5706 19.1569 14 17.5 14C15.8431 14 14.5 15.5706 14.5 17L14.5 20.5C14.5 21.3284 15.1716 22 16 22C16.8284 22 17.5 21.3284 17.5 20.5V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path opacity="0.4" d="M3.5 14.5L3.50004 9.99993C3.50007 6.22872 3.50009 4.34312 4.67166 3.17156C5.84323 2 7.72883 2 11.5 2H12.4999C16.2712 2 18.1568 2 19.3284 3.17157C20.4999 4.34315 20.4999 6.22876 20.4999 10V14C20.4999 15.02 20.4999 15.902 20.4768 16.6693C20.2921 15.3389 19.0298 14 17.5 14C15.8431 14 14.5 15.5706 14.5 17V21.9913C13.8992 22 13.2355 22 12.4999 22H10.9999C7.71249 22 6.06877 22 4.96243 21.0921C4.75986 20.9258 4.57412 20.7401 4.40788 20.5375C3.49996 19.4312 3.49997 17.7874 3.5 14.5Z" fill="currentColor" />
+                                </svg>
+                                <span>Documents</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button class="hidden md:flex items-center gap-[6px] p-2 rounded-md border border-neutral-200 dark:border-neutral-700 text-neutral-900 hover:text-neutral-800 dark:text-neutral-100 dark:hover:text-neutral-300 bg-white dark:bg-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none transition-transform duration-300">
+                                    <div class="p-[2px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current" fill="none">
+                                            <path d="M3 14L5.44721 18.8944C5.786 19.572 6.47852 20 7.23607 20H16.7639C17.5215 20 18.214 19.572 18.5528 18.8944L21 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.5 11.5L12 14L14.5 11.5M12 4V13.3912" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm font-medium">Download</span>
+                                </button>
+                                <button class="flex items-center gap-[6px] p-2 rounded-md border border-neutral-900 dark:border-white text-white hover:text-white dark:text-neutral-900 dark:hover:text-neutral-900 bg-neutral-900 dark:bg-white hover:bg-neutral-700 dark:hover:bg-neutral-200 focus:outline-none transition-transform duration-300">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="text-current hidden sm:flex" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.25 9.25V4.75H10.75V9.25H15.25V10.75H10.75V15.25H9.25V10.75H4.75V9.25H9.25Z" fill="currentColor"/>
+                                    </svg>
+                                    <span class="text-sm font-medium">Add Files</span>
                                 </button>
                             </div>
                         </div>
-                        <!-- Documents -->
-                        <div class="flex flex-col rounded-md bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700">
-                            <!-- Table Top -->
-                            <div class="flex items-center justify-between p-4 border-b border-neutral-200 dark:border-neutral-700">
-                                <div class="flex items-center gap-2 text-neutral-900 dark:text-white">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
-                                        <path d="M20.4999 10.5V10C20.4999 6.22876 20.4999 4.34315 19.3284 3.17157C18.1568 2 16.2712 2 12.4999 2H11.5C7.72883 2 5.84323 2 4.67166 3.17156C3.50009 4.34312 3.50007 6.22872 3.50004 9.99993L3.5 14.5C3.49997 17.7874 3.49996 19.4312 4.40788 20.5375C4.57412 20.7401 4.75986 20.9258 4.96242 21.0921C6.06877 22 7.71249 22 10.9999 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M7.5 7H16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M7.5 12H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M20.5 20L20.5 17C20.5 15.5706 19.1569 14 17.5 14C15.8431 14 14.5 15.5706 14.5 17L14.5 20.5C14.5 21.3284 15.1716 22 16 22C16.8284 22 17.5 21.3284 17.5 20.5V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path opacity="0.4" d="M3.5 14.5L3.50004 9.99993C3.50007 6.22872 3.50009 4.34312 4.67166 3.17156C5.84323 2 7.72883 2 11.5 2H12.4999C16.2712 2 18.1568 2 19.3284 3.17157C20.4999 4.34315 20.4999 6.22876 20.4999 10V14C20.4999 15.02 20.4999 15.902 20.4768 16.6693C20.2921 15.3389 19.0298 14 17.5 14C15.8431 14 14.5 15.5706 14.5 17V21.9913C13.8992 22 13.2355 22 12.4999 22H10.9999C7.71249 22 6.06877 22 4.96243 21.0921C4.75986 20.9258 4.57412 20.7401 4.40788 20.5375C3.49996 19.4312 3.49997 17.7874 3.5 14.5Z" fill="currentColor" />
-                                    </svg>
-                                    <span>Documents</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <button class="hidden md:flex items-center gap-[6px] p-2 rounded-md border border-neutral-200 dark:border-neutral-700 text-neutral-900 hover:text-neutral-800 dark:text-neutral-100 dark:hover:text-neutral-300 bg-white dark:bg-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none transition-transform duration-300">
-                                        <div class="p-[2px]">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="text-current" fill="none">
-                                                <path d="M3 14L5.44721 18.8944C5.786 19.572 6.47852 20 7.23607 20H16.7639C17.5215 20 18.214 19.572 18.5528 18.8944L21 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M9.5 11.5L12 14L14.5 11.5M12 4V13.3912" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                        <span class="text-sm font-medium">Download</span>
-                                    </button>
-                                    <button class="flex items-center gap-[6px] p-2 rounded-md border border-neutral-900 dark:border-white text-white hover:text-white dark:text-neutral-900 dark:hover:text-neutral-900 bg-neutral-900 dark:bg-white hover:bg-neutral-700 dark:hover:bg-neutral-200 focus:outline-none transition-transform duration-300">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="text-current hidden sm:flex" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M9.25 9.25V4.75H10.75V9.25H15.25V10.75H10.75V15.25H9.25V10.75H4.75V9.25H9.25Z" fill="currentColor"/>
-                                        </svg>
-                                        <span class="text-sm font-medium">Add Files</span>
-                                    </button>
+                        <!-- Table -->
+                        <div class="overflow-x-auto h-full overflow-y-auto">
+                            <table class="w-full min-w-max">
+                                <thead>
+                                    <tr class="text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600">
+                                        <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
+                                            <div class="flex justify-center items-center">
+                                                <label class="flex items-center cursor-pointer relative">
+                                                    <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
+                                                    <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">File Type</th>
+                                        <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Type</th>
+                                        <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Date</th>
+                                        <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Size</th>
+                                        <th class="inline-flex py-2 text-left text-sm font-medium"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
+                                        <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
+                                            <div class="flex justify-center items-center">
+                                                <label class="flex items-center cursor-pointer relative">
+                                                    <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
+                                                    <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
+                                            <div class="flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" class="text-current" fill="none">
+                                                    <path opacity="0.4" d="M12.8372 2.11303C12.5141 1.99902 12.1614 1.99902 11.4558 1.99902C8.21082 1.99902 6.58831 1.99902 5.48933 2.8851C5.26731 3.0641 5.06508 3.26634 4.88607 3.48835C4 4.58733 4 6.20984 4 9.45487V12.999H20V10.6559C20 9.83838 20 9.42963 19.8478 9.06208L19 8.99902C16.1716 8.99902 14.7574 8.99902 13.8787 8.12034C13 7.24166 13 5.82745 13 2.99902L12.8372 2.11303Z" fill="currentColor" />
+                                                    <path d="M20 13.001V10.6578C20 9.84033 20 9.43158 19.8478 9.06404C19.6955 8.69649 19.4065 8.40746 18.8284 7.8294L14.0919 3.09286C13.593 2.59397 13.3436 2.34453 13.0345 2.19672C12.9702 2.16598 12.9044 2.1387 12.8372 2.11499C12.5141 2.00098 12.1614 2.00098 11.4558 2.00098C8.21082 2.00098 6.58831 2.00098 5.48933 2.88705C5.26731 3.06606 5.06508 3.26829 4.88607 3.49031C4 4.58928 4 6.2118 4 9.45682V13.001M13 2.50098V3.00098C13 5.8294 13 7.24362 13.8787 8.1223C14.7574 9.00098 16.1716 9.00098 19 9.00098H19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M19.75 16.001H17.25C16.6977 16.001 16.25 16.4487 16.25 17.001V19.001M16.25 19.001V22.001M16.25 19.001H19.25M4.25 22.001V19.501M4.25 19.501V16.001H6C6.9665 16.001 7.75 16.7845 7.75 17.751C7.75 18.7175 6.9665 19.501 6 19.501H4.25ZM10.25 16.001H11.75C12.8546 16.001 13.75 16.8964 13.75 18.001V20.001C13.75 21.1055 12.8546 22.001 11.75 22.001H10.25V16.001Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Construction-project.pdf</td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Oct 23, 2024</td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">128.32kb</td>
+                                        <td class="w-1 inline-flex px-4 py-2 text-left text-sm font-normal">
+                                            <div class="relative">
+                                                <button class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
+                                                        <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
+                                        <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
+                                            <div class="flex justify-center items-center">
+                                                <label class="flex items-center cursor-pointer relative">
+                                                    <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
+                                                    <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
+                                            <div class="flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" class="text-current" fill="none">
+                                                    <path opacity="0.4" d="M12.8372 2.11303C12.5141 1.99902 12.1614 1.99902 11.4558 1.99902C8.21082 1.99902 6.58831 1.99902 5.48933 2.8851C5.26731 3.0641 5.06508 3.26634 4.88607 3.48835C4 4.58733 4 6.20984 4 9.45487V12.999H20V10.6559C20 9.83838 20 9.42963 19.8478 9.06208L19 8.99902C16.1716 8.99902 14.7574 8.99902 13.8787 8.12034C13 7.24166 13 5.82745 13 2.99902L12.8372 2.11303Z" fill="currentColor" />
+                                                    <path d="M20 13.001V10.6578C20 9.84033 20 9.43158 19.8478 9.06404C19.6955 8.69649 19.4065 8.40746 18.8284 7.8294L14.0919 3.09286C13.593 2.59397 13.3436 2.34453 13.0345 2.19672C12.9702 2.16598 12.9044 2.1387 12.8372 2.11499C12.5141 2.00098 12.1614 2.00098 11.4558 2.00098C8.21082 2.00098 6.58831 2.00098 5.48933 2.88705C5.26731 3.06606 5.06508 3.26829 4.88607 3.49031C4 4.58928 4 6.2118 4 9.45682V13.001M13 2.50098V3.00098C13 5.8294 13 7.24362 13.8787 8.1223C14.7574 9.00098 16.1716 9.00098 19 9.00098H19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M19.75 16.001H17.25C16.6977 16.001 16.25 16.4487 16.25 17.001V19.001M16.25 19.001V22.001M16.25 19.001H19.25M4.25 22.001V19.501M4.25 19.501V16.001H6C6.9665 16.001 7.75 16.7845 7.75 17.751C7.75 18.7175 6.9665 19.501 6 19.501H4.25ZM10.25 16.001H11.75C12.8546 16.001 13.75 16.8964 13.75 18.001V20.001C13.75 21.1055 12.8546 22.001 11.75 22.001H10.25V16.001Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Construction-project.pdf</td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Oct 23, 2024</td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">128.32kb</td>
+                                        <td class="w-1 inline-flex px-4 py-2 text-left text-sm font-normal">
+                                            <div class="relative">
+                                                <button class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
+                                                        <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer"></tr>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
+                                            <div class="flex justify-center items-center">
+                                                <label class="flex items-center cursor-pointer relative">
+                                                    <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
+                                                    <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
+                                            <div class="flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" class="text-current" fill="none">
+                                                    <path opacity="0.4" d="M12.8372 2.11303C12.5141 1.99902 12.1614 1.99902 11.4558 1.99902C8.21082 1.99902 6.58831 1.99902 5.48933 2.8851C5.26731 3.0641 5.06508 3.26634 4.88607 3.48835C4 4.58733 4 6.20984 4 9.45487V12.999H20V10.6559C20 9.83838 20 9.42963 19.8478 9.06208L19 8.99902C16.1716 8.99902 14.7574 8.99902 13.8787 8.12034C13 7.24166 13 5.82745 13 2.99902L12.8372 2.11303Z" fill="currentColor" />
+                                                    <path d="M20 13.001V10.6578C20 9.84033 20 9.43158 19.8478 9.06404C19.6955 8.69649 19.4065 8.40746 18.8284 7.8294L14.0919 3.09286C13.593 2.59397 13.3436 2.34453 13.0345 2.19672C12.9702 2.16598 12.9044 2.1387 12.8372 2.11499C12.5141 2.00098 12.1614 2.00098 11.4558 2.00098C8.21082 2.00098 6.58831 2.00098 5.48933 2.88705C5.26731 3.06606 5.06508 3.26829 4.88607 3.49031C4 4.58928 4 6.2118 4 9.45682V13.001M13 2.50098V3.00098C13 5.8294 13 7.24362 13.8787 8.1223C14.7574 9.00098 16.1716 9.00098 19 9.00098H19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M19.75 16.001H17.25C16.6977 16.001 16.25 16.4487 16.25 17.001V19.001M16.25 19.001V22.001M16.25 19.001H19.25M4.25 22.001V19.501M4.25 19.501V16.001H6C6.9665 16.001 7.75 16.7845 7.75 17.751C7.75 18.7175 6.9665 19.501 6 19.501H4.25ZM10.25 16.001H11.75C12.8546 16.001 13.75 16.8964 13.75 18.001V20.001C13.75 21.1055 12.8546 22.001 11.75 22.001H10.25V16.001Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Construction-project.pdf</td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Oct 23, 2024</td>
+                                        <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">128.32kb</td>
+                                        <td class="w-1 inline-flex px-4 py-2 text-left text-sm font-normal">
+                                            <div class="relative">
+                                                <button class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
+                                                        <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Table Bottom -->
+                        <div class="flex items-center justify-between p-4 border-t border-neutral-200 dark:border-neutral-600">
+                            <span class="text-sm font-normal opacity-60">Showing 05 entries</span>
+                            <button class="flex items-center gap-[6px] px-2 py-1 rounded-md border border-neutral-200 dark:border-neutral-700 text-neutral-900 hover:text-neutral-800 dark:text-neutral-100 dark:hover:text-neutral-300 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none transition-transform duration-300">
+                                <span class="text-sm font-medium">See All</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Status and Weather -->
+                <div class="col-span-1 flex flex-col gap-4 order-2 xl:order-3">
+                    <!-- Project Status -->
+                    <div class="p-5 gap-2 rounded-lg border bg-white dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white">
+                        <h2 class="text-md font-medium mb-3">Project Status</h2>
+                        <div class="flex gap-[16px]">
+                            <select name="project_status" class="w-full rounded-md border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white px-3 py-2">
+                                <option value="planning">Planning</option>
+                                <option value="in_progress">In Progress</option>
+                                <option value="on_hold">On Hold</option>
+                                <option value="completed">Completed</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                            <button type="button" class="px-4 py-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-md hover:bg-neutral-800 dark:hover:bg-neutral-900 transition-colors">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Weather Widget -->
+                    <div class="col-span-1 rounded-lg border bg-white dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 text-neutral-900 dark:text-white">
+                        <!-- Weather Header -->
+                        <div class="flex items-center justify-between p-4 border-b border-neutral-200 dark:border-neutral-700">
+                            <div class="flex flex-col gap-1">
+                                <h2 class="text-lg font-medium m-0 text-neutral-900 dark:text-neutral-100">Current Weather</h2>
+                            </div>
+                        </div>
+                        <!-- Current Weather -->
+                        <div class="p-6 flex items-center justify-center border-b border-neutral-200 dark:border-neutral-700">
+                            <div class="current-weather">
+                                <div class="flex flex-col items-center">
+                                    <div class="text-5xl font-light mb-2">--°F</div>
+                                    <div class="text-neutral-500 dark:text-neutral-400">Loading...</div>
                                 </div>
                             </div>
-                            <!-- Table -->
-                            <div class="overflow-x-auto">
-                                <table class="w-full min-w-max">
-                                    <thead>
-                                        <tr class="text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600">
-                                            <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <label class="flex items-center cursor-pointer relative">
-                                                        <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                        <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </th>
-                                            <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">File Type</th>
-                                            <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Type</th>
-                                            <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Date</th>
-                                            <th class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">Size</th>
-                                            <th class="inline-flex py-2 text-left text-sm font-medium"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                            <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <label class="flex items-center cursor-pointer relative">
-                                                        <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                        <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" class="text-current" fill="none">
-                                                        <path opacity="0.4" d="M12.8372 2.11303C12.5141 1.99902 12.1614 1.99902 11.4558 1.99902C8.21082 1.99902 6.58831 1.99902 5.48933 2.8851C5.26731 3.0641 5.06508 3.26634 4.88607 3.48835C4 4.58733 4 6.20984 4 9.45487V12.999H20V10.6559C20 9.83838 20 9.42963 19.8478 9.06208L19 8.99902C16.1716 8.99902 14.7574 8.99902 13.8787 8.12034C13 7.24166 13 5.82745 13 2.99902L12.8372 2.11303Z" fill="currentColor" />
-                                                        <path d="M20 13.001V10.6578C20 9.84033 20 9.43158 19.8478 9.06404C19.6955 8.69649 19.4065 8.40746 18.8284 7.8294L14.0919 3.09286C13.593 2.59397 13.3436 2.34453 13.0345 2.19672C12.9702 2.16598 12.9044 2.1387 12.8372 2.11499C12.5141 2.00098 12.1614 2.00098 11.4558 2.00098C8.21082 2.00098 6.58831 2.00098 5.48933 2.88705C5.26731 3.06606 5.06508 3.26829 4.88607 3.49031C4 4.58928 4 6.2118 4 9.45682V13.001M13 2.50098V3.00098C13 5.8294 13 7.24362 13.8787 8.1223C14.7574 9.00098 16.1716 9.00098 19 9.00098H19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M19.75 16.001H17.25C16.6977 16.001 16.25 16.4487 16.25 17.001V19.001M16.25 19.001V22.001M16.25 19.001H19.25M4.25 22.001V19.501M4.25 19.501V16.001H6C6.9665 16.001 7.75 16.7845 7.75 17.751C7.75 18.7175 6.9665 19.501 6 19.501H4.25ZM10.25 16.001H11.75C12.8546 16.001 13.75 16.8964 13.75 18.001V20.001C13.75 21.1055 12.8546 22.001 11.75 22.001H10.25V16.001Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </div>
-                                            </td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Construction-project.pdf</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Oct 23, 2024</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">128.32kb</td>
-                                            <td class="w-1 inline-flex px-4 py-2 text-left text-sm font-normal">
-                                                <div class="relative">
-                                                    <button class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
-                                                            <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                            <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                            <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer">
-                                            <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <label class="flex items-center cursor-pointer relative">
-                                                        <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                        <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" class="text-current" fill="none">
-                                                        <path opacity="0.4" d="M12.8372 2.11303C12.5141 1.99902 12.1614 1.99902 11.4558 1.99902C8.21082 1.99902 6.58831 1.99902 5.48933 2.8851C5.26731 3.0641 5.06508 3.26634 4.88607 3.48835C4 4.58733 4 6.20984 4 9.45487V12.999H20V10.6559C20 9.83838 20 9.42963 19.8478 9.06208L19 8.99902C16.1716 8.99902 14.7574 8.99902 13.8787 8.12034C13 7.24166 13 5.82745 13 2.99902L12.8372 2.11303Z" fill="currentColor" />
-                                                        <path d="M20 13.001V10.6578C20 9.84033 20 9.43158 19.8478 9.06404C19.6955 8.69649 19.4065 8.40746 18.8284 7.8294L14.0919 3.09286C13.593 2.59397 13.3436 2.34453 13.0345 2.19672C12.9702 2.16598 12.9044 2.1387 12.8372 2.11499C12.5141 2.00098 12.1614 2.00098 11.4558 2.00098C8.21082 2.00098 6.58831 2.00098 5.48933 2.88705C5.26731 3.06606 5.06508 3.26829 4.88607 3.49031C4 4.58928 4 6.2118 4 9.45682V13.001M13 2.50098V3.00098C13 5.8294 13 7.24362 13.8787 8.1223C14.7574 9.00098 16.1716 9.00098 19 9.00098H19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M19.75 16.001H17.25C16.6977 16.001 16.25 16.4487 16.25 17.001V19.001M16.25 19.001V22.001M16.25 19.001H19.25M4.25 22.001V19.501M4.25 19.501V16.001H6C6.9665 16.001 7.75 16.7845 7.75 17.751C7.75 18.7175 6.9665 19.501 6 19.501H4.25ZM10.25 16.001H11.75C12.8546 16.001 13.75 16.8964 13.75 18.001V20.001C13.75 21.1055 12.8546 22.001 11.75 22.001H10.25V16.001Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </div>
-                                            </td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Construction-project.pdf</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Oct 23, 2024</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">128.32kb</td>
-                                            <td class="w-1 inline-flex px-4 py-2 text-left text-sm font-normal">
-                                                <div class="relative">
-                                                    <button class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
-                                                            <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                            <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                            <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="text-neutral-900 dark:text-white bg-white hover:bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 border-b border-neutral-200 dark:border-neutral-600 cursor-pointer"></tr>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-medium border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <label class="flex items-center cursor-pointer relative">
-                                                        <input type="checkbox" class="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 dark:border-neutral-500 checked:bg-slate-800 dark:checked:bg-neutral-200 checked:border-slate-800 dark:checked:border-neutral-200" id="check" />
-                                                        <span class="absolute text-white dark:text-neutral-900 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
-                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">
-                                                <div class="flex justify-center items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" class="text-current" fill="none">
-                                                        <path opacity="0.4" d="M12.8372 2.11303C12.5141 1.99902 12.1614 1.99902 11.4558 1.99902C8.21082 1.99902 6.58831 1.99902 5.48933 2.8851C5.26731 3.0641 5.06508 3.26634 4.88607 3.48835C4 4.58733 4 6.20984 4 9.45487V12.999H20V10.6559C20 9.83838 20 9.42963 19.8478 9.06208L19 8.99902C16.1716 8.99902 14.7574 8.99902 13.8787 8.12034C13 7.24166 13 5.82745 13 2.99902L12.8372 2.11303Z" fill="currentColor" />
-                                                        <path d="M20 13.001V10.6578C20 9.84033 20 9.43158 19.8478 9.06404C19.6955 8.69649 19.4065 8.40746 18.8284 7.8294L14.0919 3.09286C13.593 2.59397 13.3436 2.34453 13.0345 2.19672C12.9702 2.16598 12.9044 2.1387 12.8372 2.11499C12.5141 2.00098 12.1614 2.00098 11.4558 2.00098C8.21082 2.00098 6.58831 2.00098 5.48933 2.88705C5.26731 3.06606 5.06508 3.26829 4.88607 3.49031C4 4.58928 4 6.2118 4 9.45682V13.001M13 2.50098V3.00098C13 5.8294 13 7.24362 13.8787 8.1223C14.7574 9.00098 16.1716 9.00098 19 9.00098H19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M19.75 16.001H17.25C16.6977 16.001 16.25 16.4487 16.25 17.001V19.001M16.25 19.001V22.001M16.25 19.001H19.25M4.25 22.001V19.501M4.25 19.501V16.001H6C6.9665 16.001 7.75 16.7845 7.75 17.751C7.75 18.7175 6.9665 19.501 6 19.501H4.25ZM10.25 16.001H11.75C12.8546 16.001 13.75 16.8964 13.75 18.001V20.001C13.75 21.1055 12.8546 22.001 11.75 22.001H10.25V16.001Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </div>
-                                            </td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Construction-project.pdf</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">Oct 23, 2024</td>
-                                            <td class="px-4 py-2 text-left border-r text-sm font-normal border-neutral-200 dark:border-neutral-600">128.32kb</td>
-                                            <td class="w-1 inline-flex px-4 py-2 text-left text-sm font-normal">
-                                                <div class="relative">
-                                                    <button class="focus:outline-none hover:bg-neutral-200 dark:hover:bg-neutral-600 rounded-md p-2">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="text-current" fill="none">
-                                                            <path d="M11.9922 12H12.0012" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                            <path d="M17.992 12H18.001" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                            <path d="M5.99981 12H6.00879" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- Table Bottom -->
-                            <div class="flex items-center justify-between p-4 border-t border-neutral-200 dark:border-neutral-600">
-                                <span class="text-sm font-normal opacity-60">Showing 05 entries</span>
-                                <button class="flex items-center gap-[6px] px-2 py-1 rounded-md border border-neutral-200 dark:border-neutral-700 text-neutral-900 hover:text-neutral-800 dark:text-neutral-100 dark:hover:text-neutral-300 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none transition-transform duration-300">
-                                    <span class="text-sm font-medium">See All</span>
-                                </button>
+                        </div>
+                        <!-- Daily Forecast -->
+                        <div class="px-4 py-4">
+                            <div class="weather-widget">
+                                <!-- Weather will be dynamically inserted here -->
+                                <div class="text-center p-4 text-neutral-500 dark:text-neutral-400">
+                                    Loading weather...
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -918,5 +946,13 @@
   <script src="../assets/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+  <!-- Weather Widget -->
+  <script src="../assets/js/weatherWidget.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const weatherWidget = new WeatherWidget();
+          weatherWidget.init();
+      });
+  </script>
 </body>
 </html>
